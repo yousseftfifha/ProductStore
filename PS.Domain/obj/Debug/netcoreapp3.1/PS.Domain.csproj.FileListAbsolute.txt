@@ -1,0 +1,10 @@
+C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Domain\bin\Debug\netcoreapp3.1\PS.Domain.deps.json
+C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Domain\bin\Debug\netcoreapp3.1\PS.Domain.dll
+C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Domain\bin\Debug\netcoreapp3.1\PS.Domain.pdb
+C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Domain\obj\Debug\netcoreapp3.1\PS.Domain.csproj.AssemblyReference.cache
+C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Domain\obj\Debug\netcoreapp3.1\PS.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Domain\obj\Debug\netcoreapp3.1\PS.Domain.AssemblyInfoInputs.cache
+C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Domain\obj\Debug\netcoreapp3.1\PS.Domain.AssemblyInfo.cs
+C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Domain\obj\Debug\netcoreapp3.1\PS.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Domain\obj\Debug\netcoreapp3.1\PS.Domain.dll
+C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Domain\obj\Debug\netcoreapp3.1\PS.Domain.pdb

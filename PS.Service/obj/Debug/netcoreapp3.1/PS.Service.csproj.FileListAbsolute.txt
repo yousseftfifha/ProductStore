@@ -1,0 +1,13 @@
+C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Service\bin\Debug\netcoreapp3.1\PS.Service.deps.json
+C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Service\bin\Debug\netcoreapp3.1\PS.Service.dll
+C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Service\bin\Debug\netcoreapp3.1\PS.Service.pdb
+C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Service\bin\Debug\netcoreapp3.1\PS.Domain.dll
+C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Service\bin\Debug\netcoreapp3.1\PS.Domain.pdb
+C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Service\obj\Debug\netcoreapp3.1\PS.Service.csproj.AssemblyReference.cache
+C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Service\obj\Debug\netcoreapp3.1\PS.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Service\obj\Debug\netcoreapp3.1\PS.Service.AssemblyInfoInputs.cache
+C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Service\obj\Debug\netcoreapp3.1\PS.Service.AssemblyInfo.cs
+C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Service\obj\Debug\netcoreapp3.1\PS.Service.csproj.CoreCompileInputs.cache
+C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Service\obj\Debug\netcoreapp3.1\PS.Service.csproj.CopyComplete
+C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Service\obj\Debug\netcoreapp3.1\PS.Service.dll
+C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Service\obj\Debug\netcoreapp3.1\PS.Service.pdb
