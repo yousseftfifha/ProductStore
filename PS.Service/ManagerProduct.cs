@@ -50,7 +50,7 @@ namespace PS.Service
         public IList<Product> GetChemicalCity()
         {
             var query = from p in Products
-                        orderby ((Chemical)p).City ascending
+                        orderby ((Chemical)p).Address.City ascending
                         where p is Chemical
                         select p;
 
@@ -62,8 +62,8 @@ namespace PS.Service
         {
             var query = from c in Products
                             // where c is Chemical
-                        orderby ((Chemical)c).City ascending
-                        group c by ((Chemical)c).City;
+                        orderby ((Chemical)c).Address.City ascending
+                        group c by ((Chemical)c).Address.City;
 
             foreach (var map in query)
             {
@@ -81,7 +81,7 @@ namespace PS.Service
         public int GetCountProduct(string city)
         {
             var query = from p in Products
-                        where p is Chemical && ((Chemical)p).City.Equals(city)
+                        where p is Chemical && ((Chemical)p).Address.City.Equals(city)
                         select p;
 
             return query.Count();

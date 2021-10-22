@@ -45,14 +45,10 @@ namespace PS.Console
             provider1.GetDetails();
 
             #endregion
-
             #region 03/10/2021
-
             ManagerProvider managerProvider = new ManagerProvider();
             managerProvider.providers = new List<Provider>() {provider1, provider2};
-
             #endregion
-
             #region 17/10/2021
             PSContext ctxt = new PSContext();
             Product p =  new Product()

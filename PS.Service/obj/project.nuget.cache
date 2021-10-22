@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Suwp9rn37sKxckAKAjBACgLrCAfX41xL8AxGySDB+bH+kt7SK4mbeMa1DqdhaUVlosdkk0xUFaJALfWRa1AXyA==",
+  "dgSpecHash": "No6rtN5xSWq2WF3O/Dc3e/daIqsBgZ85HeAoIlqRCyaaP8gQiiP1BDlNe7+VeFAO46hv/lCk9/drHYJ38ZKlyw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Youssef Tfifhq\\Documents\\Supports de cours , projets et examens\\4ERP-BI\\Architecture des SI I .Net Core\\ProductStore\\PS.Service\\PS.Service.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Youssef Tfifhq\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.11\\microsoft.entityframeworkcore.abstractions.5.0.11.nupkg.sha512"
+  ],
   "logs": []
 }

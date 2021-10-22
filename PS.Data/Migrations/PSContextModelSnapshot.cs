@@ -54,7 +54,7 @@ namespace PS.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImageName")
+                    b.Property<string>("Images")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -134,13 +134,7 @@ namespace PS.Data.Migrations
                 {
                     b.HasBaseType("PS.Domain.Product");
 
-                    b.Property<string>("City")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("LabName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("StreetAdress")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasDiscriminator().HasValue("Chemical");
@@ -168,6 +162,32 @@ namespace PS.Data.Migrations
                         .HasForeignKey("ListProvidersId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("PS.Domain.Chemical", b =>
+                {
+                    b.OwnsOne("PS.Domain.Address", "Address", b1 =>
+                        {
+                            b1.Property<int>("ChemicalProductId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("int")
+                                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                            b1.Property<string>("City")
+                                .HasColumnType("nvarchar(max)");
+
+                            b1.Property<string>("StreetAddress")
+                                .HasColumnType("nvarchar(max)");
+
+                            b1.HasKey("ChemicalProductId");
+
+                            b1.ToTable("Products");
+
+                            b1.WithOwner()
+                                .HasForeignKey("ChemicalProductId");
+                        });
+
+                    b.Navigation("Address");
                 });
 
             modelBuilder.Entity("PS.Domain.Category", b =>
