@@ -1,14 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace PS.Domain
 {
     public class Provider:Concept
     {
+        [Key]
         public int Id { get; set; }
         public string UserName { get; set; }
         string password;
         string confirmpassword;
+        [DataType(DataType.Password), 
+         Required, 
+         Compare("Password")]
         public string ConfirmPassword
         {
             get { return confirmpassword; }
@@ -19,7 +24,7 @@ namespace PS.Domain
                 else Console.WriteLine("mot de passe et confirm ne sont pas identiques");
             }
         }
-
+        [DataType(DataType.Password), MinLength(8),Required]
         public string Password
         {
             get { return password; }
@@ -30,6 +35,7 @@ namespace PS.Domain
                 else Console.WriteLine("la taille de password doiet etre ente 5 et 20");
             }
         }
+        [EmailAddress, Required]
         public string Email { get; set; }
         public DateTime DateCreated { get; set; }
         public Boolean IsApproved { get; set; }

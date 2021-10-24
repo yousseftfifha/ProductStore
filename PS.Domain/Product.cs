@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PS.Domain
 {
     public class Product:Concept
     {
+        [Key]
         public int ProductId { get; set; }
         
-        [Required(ErrorMessage = "Name est Obligatoire")]
-        [MaxLength(25,ErrorMessage = "Name ne doit pas depasser 25 caractere ")]
-        [StringLength(50,ErrorMessage = "Name ne doit pas depasser 50 caractere dans la BDD")]
+        [Required(ErrorMessage ="Name Required"),
+         MaxLength(50), 
+         StringLength(25, ErrorMessage ="Name must have 25 caracters")]
         public string Name { get; set; }
         
         [DataType(DataType.MultilineText)]
@@ -19,14 +21,20 @@ namespace PS.Domain
         [DataType(DataType.Currency)]
         public double Price { get; set; }
         
-        
+        [Range(0,int.MaxValue)]
         public int Quantity { get; set; }
         
-        [DisplayFormat(DataFormatString ="Production Date")]
-        
+        [DataType(DataType.Date),
+         Display(Name="Date de production")]
         public DateTime DateProd { get; set; }
+        
+        public int CategoryRef { get; set; }
+        [ForeignKey("CategoryRef")]
         public Category Category{ get; set; }
+        
+        [DataType(DataType.ImageUrl)]
         public string Images { get; set; }
+      
         public IList<Provider> ListProviders { get; set; }
 
         public override void GetDetails()

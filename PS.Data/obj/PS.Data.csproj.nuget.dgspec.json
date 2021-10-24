@@ -14,7 +14,7 @@
         "outputPath": "C:\\Users\\Youssef Tfifhq\\Documents\\Supports de cours , projets et examens\\4ERP-BI\\Architecture des SI I .Net Core\\ProductStore\\PS.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\Youssef Tfifhq\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -98,7 +98,7 @@
         "outputPath": "C:\\Users\\Youssef Tfifhq\\Documents\\Supports de cours , projets et examens\\4ERP-BI\\Architecture des SI I .Net Core\\ProductStore\\PS.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\Youssef Tfifhq\\AppData\\Roaming\\NuGet\\NuGet.Config",
