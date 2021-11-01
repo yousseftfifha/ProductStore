@@ -100,7 +100,7 @@ namespace PS.Service
         }
         public  void FindProduct(Category c)
         {
-            var result=Products.Where(p=>p.Category == c);
+            var result=Products.Where(p=>p.MyCategory == c);
         }
 
     }

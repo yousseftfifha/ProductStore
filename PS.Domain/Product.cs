@@ -28,9 +28,10 @@ namespace PS.Domain
          Display(Name="Date de production")]
         public DateTime DateProd { get; set; }
         
-        public int CategoryRef { get; set; }
-        [ForeignKey("CategoryRef")]
-        public Category Category{ get; set; }
+        public Category MyCategory { get; set; }
+        [ForeignKey("MyCategory")]
+        public int? CategoryId { get; set; }
+
         
         [DataType(DataType.ImageUrl)]
         public string Images { get; set; }

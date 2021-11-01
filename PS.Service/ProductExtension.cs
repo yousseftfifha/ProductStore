@@ -13,7 +13,7 @@ namespace PS.Service
 
         public static Boolean InCategory(this ManagerProduct mp, Product p, Category c)
         {
-            return p.Category.CategoryId.Equals(c.CategoryId);
+            return p.MyCategory.CategoryId.Equals(c.CategoryId);
 
         }
     }

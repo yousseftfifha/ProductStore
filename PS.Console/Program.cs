@@ -50,14 +50,30 @@ namespace PS.Console
             managerProvider.providers = new List<Provider>() {provider1, provider2};
             #endregion
             #region 17/10/2021
-            PSContext ctxt = new PSContext();
+            /*/PSContext ctxt = new PSContext();
             Product p =  new Product()
             {
                 Name = "PROD1",
                 DateProd = DateTime.Now
             };
             ctxt.Products.Add(p);
+            ctxt.SaveChanges();*/
+            #endregion
+            #region 26/10/2021
+
+            Product p = new Product()
+            {
+                Name = "prod1",
+                DateProd = DateTime.Now
+
+
+            };
+            PSContext ctxt = new PSContext();
+            ctxt.Products.Add(p);
             ctxt.SaveChanges();
+
+
+
             #endregion
         }
     }

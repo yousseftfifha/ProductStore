@@ -1,5 +1,6 @@
 ﻿using System.Runtime.Intrinsics.X86;
 using Microsoft.EntityFrameworkCore;
+using PS.Data.Configurations;
 using PS.Domain;
 
 namespace PS.Data
@@ -17,6 +18,11 @@ namespace PS.Data
             Initial Catalog = ProductStoreDB; 
             Integrated Security = true");
         }
-        
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new CategoryConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductConfiguration());
+            modelBuilder.ApplyConfiguration(new ChemicalConfiguration());
+        }
     }
 }
