@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PS.Data;
 
 namespace PS.Data.Migrations
 {
     [DbContext(typeof(PSContext))]
-    partial class PSContextModelSnapshot : ModelSnapshot
+    [Migration("20211101102018_AllConfigurations")]
+    partial class AllConfigurations
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -35,50 +37,6 @@ namespace PS.Data.Migrations
                     b.HasKey("CategoryId");
 
                     b.ToTable("MyCategories");
-                });
-
-            modelBuilder.Entity("PS.Domain.Client", b =>
-                {
-                    b.Property<string>("Cin")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<DateTime>("DateNaissance")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Mail")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("MyName");
-
-                    b.Property<string>("Nom")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Cin");
-
-                    b.ToTable("Clients");
-                });
-
-            modelBuilder.Entity("PS.Domain.Invoice", b =>
-                {
-                    b.Property<string>("clientFk")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("ProductFK")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("dateAchat")
-                        .HasColumnType("datetime2");
-
-                    b.Property<double>("Prix")
-                        .HasColumnType("float");
-
-                    b.HasKey("clientFk", "ProductFK", "dateAchat");
-
-                    b.HasIndex("ProductFK");
-
-                    b.ToTable("Invoices");
                 });
 
             modelBuilder.Entity("PS.Domain.Product", b =>
@@ -193,25 +151,6 @@ namespace PS.Data.Migrations
                     b.HasDiscriminator().HasValue("Chemical");
                 });
 
-            modelBuilder.Entity("PS.Domain.Invoice", b =>
-                {
-                    b.HasOne("PS.Domain.Product", "Product")
-                        .WithMany("Invoices")
-                        .HasForeignKey("ProductFK")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("PS.Domain.Client", "MyClient")
-                        .WithMany("Invoices")
-                        .HasForeignKey("clientFk")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("MyClient");
-
-                    b.Navigation("Product");
-                });
-
             modelBuilder.Entity("PS.Domain.Product", b =>
                 {
                     b.HasOne("PS.Domain.Category", "MyCategory")
@@ -270,16 +209,6 @@ namespace PS.Data.Migrations
             modelBuilder.Entity("PS.Domain.Category", b =>
                 {
                     b.Navigation("ListProducts");
-                });
-
-            modelBuilder.Entity("PS.Domain.Client", b =>
-                {
-                    b.Navigation("Invoices");
-                });
-
-            modelBuilder.Entity("PS.Domain.Product", b =>
-                {
-                    b.Navigation("Invoices");
                 });
 #pragma warning restore 612, 618
         }

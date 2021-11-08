@@ -38,6 +38,8 @@ namespace PS.Domain
       
         public IList<Provider> ListProviders { get; set; }
 
+        public IList<Invoice> Invoices { get; set; }
+
         public override void GetDetails()
         {
             Console.WriteLine($"ProductId: {ProductId}\t" +

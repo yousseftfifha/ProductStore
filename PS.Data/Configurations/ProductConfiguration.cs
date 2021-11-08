@@ -15,6 +15,7 @@ namespace PS.Data.Configurations
                     .WithMany(category => category.ListProducts)
                     .HasForeignKey(product => product.CategoryId)
                     .OnDelete(DeleteBehavior.NoAction);
+          
 
             }
         }

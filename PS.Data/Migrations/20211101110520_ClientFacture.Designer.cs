@@ -3,21 +3,38 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PS.Data;
 
 namespace PS.Data.Migrations
 {
     [DbContext(typeof(PSContext))]
-    partial class PSContextModelSnapshot : ModelSnapshot
+    [Migration("20211101110520_ClientFacture")]
+    partial class ClientFacture
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.11")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("ClientProduct", b =>
+                {
+                    b.Property<string>("ClientsCin")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("ProductsProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ClientsCin", "ProductsProductId");
+
+                    b.HasIndex("ProductsProductId");
+
+                    b.ToTable("ClientProduct");
+                });
 
             modelBuilder.Entity("PS.Domain.Category", b =>
                 {
@@ -57,28 +74,7 @@ namespace PS.Data.Migrations
 
                     b.HasKey("Cin");
 
-                    b.ToTable("Clients");
-                });
-
-            modelBuilder.Entity("PS.Domain.Invoice", b =>
-                {
-                    b.Property<string>("clientFk")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("ProductFK")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("dateAchat")
-                        .HasColumnType("datetime2");
-
-                    b.Property<double>("Prix")
-                        .HasColumnType("float");
-
-                    b.HasKey("clientFk", "ProductFK", "dateAchat");
-
-                    b.HasIndex("ProductFK");
-
-                    b.ToTable("Invoices");
+                    b.ToTable("Client");
                 });
 
             modelBuilder.Entity("PS.Domain.Product", b =>
@@ -193,23 +189,19 @@ namespace PS.Data.Migrations
                     b.HasDiscriminator().HasValue("Chemical");
                 });
 
-            modelBuilder.Entity("PS.Domain.Invoice", b =>
+            modelBuilder.Entity("ClientProduct", b =>
                 {
-                    b.HasOne("PS.Domain.Product", "Product")
-                        .WithMany("Invoices")
-                        .HasForeignKey("ProductFK")
+                    b.HasOne("PS.Domain.Client", null)
+                        .WithMany()
+                        .HasForeignKey("ClientsCin")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("PS.Domain.Client", "MyClient")
-                        .WithMany("Invoices")
-                        .HasForeignKey("clientFk")
+                    b.HasOne("PS.Domain.Product", null)
+                        .WithMany()
+                        .HasForeignKey("ProductsProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("MyClient");
-
-                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("PS.Domain.Product", b =>
@@ -270,16 +262,6 @@ namespace PS.Data.Migrations
             modelBuilder.Entity("PS.Domain.Category", b =>
                 {
                     b.Navigation("ListProducts");
-                });
-
-            modelBuilder.Entity("PS.Domain.Client", b =>
-                {
-                    b.Navigation("Invoices");
-                });
-
-            modelBuilder.Entity("PS.Domain.Product", b =>
-                {
-                    b.Navigation("Invoices");
                 });
 #pragma warning restore 612, 618
         }
