@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using PS.Data;
 using PS.Domain;
 using PS.Service;
@@ -12,7 +13,7 @@ namespace PS.Console
         {
             #region 20/09/2021
 
-            Category cat1, cat2, cat3;
+            /*Category cat1, cat2, cat3;
             cat1 = new Category() {Name = "cat1"};
             cat2 = new Category() {Name = "cat2"};
             cat3 = new Category() {Name = "cat3"};
@@ -48,6 +49,7 @@ namespace PS.Console
             #region 03/10/2021
             ManagerProvider managerProvider = new ManagerProvider();
             managerProvider.providers = new List<Provider>() {provider1, provider2};
+           */
             #endregion
             #region 17/10/2021
             /*/PSContext ctxt = new PSContext();
@@ -61,7 +63,7 @@ namespace PS.Console
             #endregion
             #region 26/10/2021
 
-            Product p = new Product()
+           /* Product p = new Product()
             {
                 Name = "prod1",
                 DateProd = DateTime.Now
@@ -71,8 +73,28 @@ namespace PS.Console
             PSContext ctxt = new PSContext();
             ctxt.Products.Add(p);
             ctxt.SaveChanges();
+*/
 
 
+            #endregion
+
+            #region 08/11/2021
+            Category c = new Category()
+            {
+                Name = "cat1",
+            };
+            Product p = new Product()
+            {
+                Name = "prod1",
+                DateProd = DateTime.Now,
+                MyCategory = c
+            };
+            PSContext ctxt = new PSContext();
+            // ctxt.Categories.Add(c);
+            // ctxt.Products.Add(p);
+            // ctxt.SaveChanges();
+            Product product = ctxt.Products.ToList().FirstOrDefault(p => p.Name == "prod1");
+            product.GetDetails();
 
             #endregion
         }

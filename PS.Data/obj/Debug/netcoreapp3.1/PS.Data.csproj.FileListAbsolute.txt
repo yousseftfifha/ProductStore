@@ -13,3 +13,4 @@ C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI
 C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Data\obj\Debug\netcoreapp3.1\PS.Data.dll
 C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Data\obj\Debug\netcoreapp3.1\PS.Data.pdb
 C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Data\obj\Debug\netcoreapp3.1\PS.Data.genruntimeconfig.cache
+C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Data\obj\Debug\netcoreapp3.1\PS.Data.csproj.CopyComplete

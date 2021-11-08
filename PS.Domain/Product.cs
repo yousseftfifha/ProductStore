@@ -28,7 +28,7 @@ namespace PS.Domain
          Display(Name="Date de production")]
         public DateTime DateProd { get; set; }
         
-        public Category MyCategory { get; set; }
+        public virtual Category MyCategory { get; set; }
         [ForeignKey("MyCategory")]
         public int? CategoryId { get; set; }
 
@@ -36,18 +36,17 @@ namespace PS.Domain
         [DataType(DataType.ImageUrl)]
         public string Images { get; set; }
       
-        public IList<Provider> ListProviders { get; set; }
+        public virtual IList<Provider> ListProviders { get; set; }
 
-        public IList<Invoice> Invoices { get; set; }
+        public virtual IList<Invoice> Invoices { get; set; }
 
         public override void GetDetails()
         {
             Console.WriteLine($"ProductId: {ProductId}\t" +
                               $"Name: {Name}\t" +
-                              $"Description: {Description}\t" +
-                              $"Price: {Price}\t" +
-                              $"Quantity: {Quantity}\t" +
-                              $"DateProd:{DateProd}\t" );
+                              $"DateProd:{DateProd}\t" +
+                              $"Category:{MyCategory.Name}\t" );
+           
         }
 
         public virtual string GetMyType()

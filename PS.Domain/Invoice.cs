@@ -9,8 +9,8 @@ namespace PS.Domain
         public double Prix { get; set; }
         public int ProductFK { get; set; }
 
-        public Client MyClient { get; set; }
+        public virtual Client MyClient { get; set; }
 
-        public Product Product { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

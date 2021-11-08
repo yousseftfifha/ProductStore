@@ -7,11 +7,10 @@ namespace PS.Domain
     {
         public int CategoryId { get; set; }
         public string Name { get; set; }
-        public IList<Product> ListProducts { get; set; }
+        public virtual IList<Product> ListProducts { get; set; }
         public override void GetDetails()
         {
-            Console.WriteLine($"CategoryId : {CategoryId}" +
-                              $"Name : {Name}" );
+            Console.WriteLine($"Name : {Name}" );
         }
         
     }

@@ -20,6 +20,7 @@ namespace PS.Data
             optionsBuilder.UseSqlServer(@"Data Source=(localdb)\mssqllocaldb; 
             Initial Catalog = ProductStoreDB; 
             Integrated Security = true");
+            optionsBuilder.UseLazyLoadingProxies();
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

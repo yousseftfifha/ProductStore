@@ -39,7 +39,7 @@ namespace PS.Domain
         public string Email { get; set; }
         public DateTime DateCreated { get; set; }
         public Boolean IsApproved { get; set; }
-        public IList<Product> ListProducts { get; set; }
+        public virtual IList<Product> ListProducts { get; set; }
         public override void GetDetails()
         {
             Console.WriteLine($"Id: {Id} \t" + 

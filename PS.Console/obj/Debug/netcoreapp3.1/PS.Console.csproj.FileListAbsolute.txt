@@ -66,4 +66,6 @@ C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI
 C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Console\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Console\bin\Debug\netcoreapp3.1\PS.Data.dll
 C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Console\bin\Debug\netcoreapp3.1\PS.Data.pdb
+C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Console\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Console\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
 C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Console\obj\Debug\netcoreapp3.1\PS.Console.csproj.CopyComplete

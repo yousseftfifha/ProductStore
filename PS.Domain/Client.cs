@@ -12,6 +12,6 @@ namespace PS.Domain
         public string Mail { get; set; }
         public string Nom { get; set; }
         public string Name { get; set; }
-        public IList<Invoice> Invoices{ get; set; }
+        public virtual IList<Invoice> Invoices{ get; set; }
     }
 }
