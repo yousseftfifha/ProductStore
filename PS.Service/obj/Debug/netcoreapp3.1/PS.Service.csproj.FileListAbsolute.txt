@@ -11,3 +11,5 @@ C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI
 C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Service\obj\Debug\netcoreapp3.1\PS.Service.csproj.CopyComplete
 C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Service\obj\Debug\netcoreapp3.1\PS.Service.dll
 C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Service\obj\Debug\netcoreapp3.1\PS.Service.pdb
+C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Service\bin\Debug\netcoreapp3.1\PS.Data.dll
+C:\Users\Youssef Tfifhq\Documents\Supports de cours , projets et examens\4ERP-BI\Architecture des SI I .Net Core\ProductStore\PS.Service\bin\Debug\netcoreapp3.1\PS.Data.pdb

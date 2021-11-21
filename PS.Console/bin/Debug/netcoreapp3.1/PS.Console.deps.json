@@ -1437,6 +1437,7 @@
       },
       "PS.Service/1.0.0": {
         "dependencies": {
+          "PS.Data": "1.0.0",
           "PS.Domain": "1.0.0"
         },
         "runtime": {

@@ -68,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -156,7 +156,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -220,7 +220,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -252,6 +252,9 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
+              "C:\\Users\\Youssef Tfifhq\\Documents\\Supports de cours , projets et examens\\4ERP-BI\\Architecture des SI I .Net Core\\ProductStore\\PS.Data\\PS.Data.csproj": {
+                "projectPath": "C:\\Users\\Youssef Tfifhq\\Documents\\Supports de cours , projets et examens\\4ERP-BI\\Architecture des SI I .Net Core\\ProductStore\\PS.Data\\PS.Data.csproj"
+              },
               "C:\\Users\\Youssef Tfifhq\\Documents\\Supports de cours , projets et examens\\4ERP-BI\\Architecture des SI I .Net Core\\ProductStore\\PS.Domain\\PS.Domain.csproj": {
                 "projectPath": "C:\\Users\\Youssef Tfifhq\\Documents\\Supports de cours , projets et examens\\4ERP-BI\\Architecture des SI I .Net Core\\ProductStore\\PS.Domain\\PS.Domain.csproj"
               }
@@ -282,7 +285,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
