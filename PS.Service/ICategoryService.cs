@@ -8,5 +8,6 @@ namespace PS.Service
         public void Add(Category category);
         public void Remove(Category category);
         public IList<Category> GetAll();
+
     }
 }

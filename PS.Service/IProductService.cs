@@ -8,5 +8,6 @@ namespace PS.Service
         public void Add(Product product);
         public void Remove(Product product);
         public IList<Product> GetAll();
+        
     }
 }

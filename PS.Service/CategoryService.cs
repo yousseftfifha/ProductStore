@@ -8,24 +8,30 @@ namespace PS.Service
 {
     public class CategoryService:ICategoryService
     {
-        PSContext ctxt;
-        public CategoryService(IDatabaseFactory databaseFactory)
+        private IRepository<Category> repository;
+        IUnitOfWork UnitOfWork;
+
+        public CategoryService(IUnitOfWork unitOfWork)
         {
-            this.ctxt = databaseFactory.DataContext;
+            this.UnitOfWork = unitOfWork;
+            this.repository = UnitOfWork.getRepository<Category>();
         }
         public void Add(Category category)
         {
-             ctxt.Categories.Add(category);
-             ctxt.SaveChanges();
+            repository.Add(category);
         }
         public void Remove(Category category)
         {
-            ctxt.Categories.Remove(category);
-            ctxt.SaveChanges();        }
+            repository.Delete(category);
+               }
 
         public IList<Category> GetAll()
         {
-         return   ctxt.Categories.ToList();
+         return   repository.GetAll().ToList();
+        }
+        public void Commit()
+        {
+            UnitOfWork.Commit();
         }
     }
 }

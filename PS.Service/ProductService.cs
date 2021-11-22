@@ -8,24 +8,32 @@ namespace PS.Service
 {
     public class ProductService:IProductService
     {
-        PSContext ctxt;
-        public ProductService(IDatabaseFactory databaseFactory)
+         IRepository<Product> repository;
+         IUnitOfWork UnitOfWork;
+        public ProductService(IUnitOfWork unitOfWork)
         {
-            this.ctxt = databaseFactory.DataContext;
+            this.UnitOfWork = unitOfWork;
+            this.repository = UnitOfWork.getRepository<Product>();
         }
         public void Add(Product product)
         {
-            ctxt.Products.Add(product);
-            ctxt.SaveChanges();        }
+            repository.Add(product);
+        }
 
         public void Remove(Product product)
         {
-            ctxt.Products.Remove(product);
-            ctxt.SaveChanges();         }
+            repository.Delete(product);
+        }
 
         public IList<Product> GetAll()
         {
-            return   ctxt.Products.ToList();
+            return   repository.GetAll().ToList();
         }
+
+        public void Commit()
+        {
+            UnitOfWork.Commit();
+        }
+
     }
 }
