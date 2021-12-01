@@ -3,11 +3,13 @@ using PS.Domain;
 
 namespace PS.Service
 {
-    public interface IProductService
+    public interface IProductService :IService<Product>
     {
-        public void Add(Product product);
-        public void Remove(Product product);
-        public IList<Product> GetAll();
-        
+        IList<Product> FindMost5ExpensiveProds();
+       double UnavailableProdPercentage();
+
+       IList<Product> GetProdByClient(Client client);
+
+       void DeleteOldProducts();
     }
 }

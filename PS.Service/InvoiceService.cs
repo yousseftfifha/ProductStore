@@ -1,14 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using PS.Data;
 using PS.Data.Infrastructures;
 using PS.Domain;
 
 namespace PS.Service
 {
-    public class CategoryService:Service<Category>,ICategoryService
+    public class InvoiceService:Service<Invoice>,IInvoiceService
     {
-        public CategoryService(IUnitOfWork unitOfWork) : base(unitOfWork)
+        public InvoiceService(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
         }
     }

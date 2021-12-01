@@ -78,7 +78,7 @@ namespace PS.Console
 
             #endregion
             #region 08/11/2021
-            Category c = new Category()
+            /*Category c = new Category()
             {
                 Name = "cat1",
             };
@@ -93,7 +93,7 @@ namespace PS.Console
             // ctxt.Products.Add(p);
             // ctxt.SaveChanges();
             Product product = ctxt.Products.ToList().FirstOrDefault(p => p.Name == "prod1");
-            product.GetDetails();
+            product.GetDetails();*/
             #endregion
         }
     }

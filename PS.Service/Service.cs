@@ -8,7 +8,7 @@ namespace PS.Service
     public class Service<T>:IService<T> where T:class 
     {
         IRepository<T> repository;
-        IUnitOfWork unitOfWork;
+       protected IUnitOfWork unitOfWork;
         public Service(IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;

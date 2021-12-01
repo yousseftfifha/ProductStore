@@ -3,7 +3,7 @@ using PS.Domain;
 
 namespace PS.Service
 {
-    public interface ICategoryService:IService<Category>
+    public interface IInvoiceService:IService<Invoice>
     {
     }
 }

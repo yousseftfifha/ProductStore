@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using PS.Data;
 using PS.Data.Infrastructures;
@@ -6,34 +7,35 @@ using PS.Domain;
 
 namespace PS.Service
 {
-    public class ProductService:IProductService
+    public class ProductService:Service<Product>,IProductService
     {
-         IRepository<Product> repository;
-         IUnitOfWork UnitOfWork;
-        public ProductService(IUnitOfWork unitOfWork)
+        IInvoiceService invoiceService ;
+
+        public ProductService(IUnitOfWork unitOfWork,InvoiceService invoiceService) : base(unitOfWork)
         {
-            this.UnitOfWork = unitOfWork;
-            this.repository = UnitOfWork.getRepository<Product>();
-        }
-        public void Add(Product product)
-        {
-            repository.Add(product);
+            this.invoiceService = invoiceService;
         }
 
-        public void Remove(Product product)
+        public IList<Product> FindMost5ExpensiveProds()
         {
-            repository.Delete(product);
+            return GetMany().OrderByDescending(product => product.Price).Take(5).ToList();
         }
 
-        public IList<Product> GetAll()
+        public double UnavailableProdPercentage()
         {
-            return   repository.GetAll().ToList();
+            return ((double)(GetMany(product => product.Quantity == 0).Count() ) / GetMany().Count())* 100;
         }
 
-        public void Commit()
+        public IList<Product> GetProdByClient(Client client)
         {
-            UnitOfWork.Commit();
+            return invoiceService.GetMany(invoice => invoice.clientFk == client.Cin)
+                .Select(invoice => invoice.Product).ToList();
+            
         }
 
+        public void DeleteOldProducts()
+        {
+            Delete(product => product.DateProd.AddYears(1)>DateTime.Now);
+        }
     }
 }
